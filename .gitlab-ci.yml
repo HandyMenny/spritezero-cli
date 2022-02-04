@@ -1,0 +1,29 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+test node 12:
+  image: node:12
+  script:
+    - yarn install
+    - yarn run test
+
+test node 14:
+  image: node:14
+  script:
+    - yarn install
+    - yarn run test
+
+test node 16:
+  image: node:16
+  script:
+    - yarn install
+    - yarn run test
+
+test node 17:
+  image: node:17
+  script:
+    - yarn install
+    - yarn run test
