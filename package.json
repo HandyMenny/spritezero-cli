@@ -17,7 +17,7 @@
     "vector"
   ],
   "dependencies": {
-    "@mapbox/spritezero": "^6.3.0",
+    "@handymenny/spritezero": "^8.0.0",
     "json-stable-stringify": "^1.0.1",
     "minimist": "^1.2.5",
     "multiline": "^2.0.0",
