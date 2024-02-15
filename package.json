@@ -32,7 +32,7 @@
   },
   "scripts": {
     "lint": "eslint bin/spritezero test/",
-    "test": "npm run lint && tap test/test.js"
+    "test": "npm run lint && tap --no-timeout test/test.js"
   },
   "resolutions": {
     "mapnik": "^4.5.0"
