@@ -24,7 +24,7 @@ test('generate 1x sprites', function(t) {
   var spritezero = spawn('node', [
     './bin/spritezero',
     'test/output/maki',
-    'test/fixture/input']);
+    'test/fixture/input/svg']);
   spritezero.stderr.on('data', function(err) {
     t.fail(err.toString());
   });
@@ -41,7 +41,7 @@ test('generate 2x sprites', function(t) {
   var spritezero = spawn('node', [
     './bin/spritezero',
     'test/output/maki-r-2',
-    'test/fixture/input',
+    'test/fixture/input/svg',
     '--ratio', 2]);
   spritezero.on('close', function (code) {
     t.equal(code, 0);
@@ -56,7 +56,7 @@ test('generate --retina sprites', function(t) {
   var spritezero = spawn('node', [
     './bin/spritezero',
     'test/output/maki-retina',
-    'test/fixture/input',
+    'test/fixture/input/svg',
     '--retina']);
   spritezero.on('close', function (code) {
     t.equal(code, 0);
@@ -71,7 +71,7 @@ test('generate --unique sprites', function(t) {
   var spritezero = spawn('node', [
     './bin/spritezero',
     'test/output/maki-unique',
-    'test/fixture/input',
+    'test/fixture/input/svg',
     '--unique']);
   spritezero.on('close', function (code) {
     t.equal(code, 0);
