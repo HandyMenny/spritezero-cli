@@ -82,3 +82,34 @@ test('generate --unique sprites', function(t) {
   });
 });
 
+test('generate 1x sprites from png', function(t) {
+  var spritezero = spawn('node', [
+    './bin/spritezero',
+    'test/output/maki-png',
+    'test/fixture/input/png']);
+  spritezero.stderr.on('data', function(err) {
+    t.fail(err.toString());
+  });
+  spritezero.on('close', function (code) {
+    t.equal(code, 0);
+    t.deepEqual(
+      JSON.parse(fs.readFileSync('test/output/maki-png.json')),
+      JSON.parse(fs.readFileSync('test/fixture/output/maki-png.json')), 'layout');
+    t.end();
+  });
+});
+
+test('generate 2x sprites from png', function(t) {
+  var spritezero = spawn('node', [
+    './bin/spritezero',
+    'test/output/maki-png-r-2',
+    'test/fixture/input/png',
+    '--ratio', 2]);
+  spritezero.on('close', function (code) {
+    t.equal(code, 0);
+    t.deepEqual(
+      JSON.parse(fs.readFileSync('test/output/maki-png-r-2.json')),
+      JSON.parse(fs.readFileSync('test/fixture/output/maki-png-r-2.json')), 'layout');
+    t.end();
+  });
+});
