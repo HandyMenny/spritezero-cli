@@ -1,12 +1,12 @@
 {
-  "name": "@beyondtracks/spritezero-cli",
+  "name": "@handymenny/spritezero-cli",
   "version": "2.3.1",
   "main": "index.js",
-  "description": "a command-line interface for spritezero generation of raster sprites from SVG input",
+  "description": "a command-line interface for spritezero generation of raster sprites from SVG/PNG input",
   "author": "Tom MacWright",
   "license": "ISC",
-  "repository": "gitlab:beyondtracks/spritezero-cli",
-  "bugs": "https://gitlab.com/beyondtracks/spritezero-cli/issues",
+  "repository": "handymenny/spritezero-cli",
+  "bugs": "https://github.com/handymenny/spritezero-cli/issues",
   "bin": {
     "spritezero": "bin/spritezero"
   },
